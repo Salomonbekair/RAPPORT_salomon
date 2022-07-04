@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+   <pre>
+    <b>
+    THEME: SIMULITUDE ET DIFFERENCE ENTRE IHM SEIMENS ET IHM SCHNEIDER
+    </b>
+
+       <b>
+        I.	RESSEMBLANCE ENTRE IHM SIEMENS ET SCHNEIDER
+       </b>
+    Un système de supervision et de contrôle est constitué d’une partie matérielle (automate S7-300, automate M340, différents capteurs de pression et de température …etc.) 
+    et d’une partie logicielle (traitement et affichage des données). 
+    La partie matérielle permet de relever les paramètres et d’interagir physiquement avec l’installation, tandis que le logiciel est le cerveau du système.
+    Pour créer une interface Homme/Machine, il faut avoir préalablement pris connaissance
+    des éléments de l’installation ainsi que le logiciel de programmation de l’automate utilisé.
+
+    <b>
+        II.	DIFFERENECE ENTRE LES DEUX IHM
+    </b>
+    <b>1.	IHM SEIMENS</b>
+    <b>a.	Création de vue</b>
+    L’interface TIA PORTAL V15 nous permet de créer des vues dans le but de contrôler et
+    de commander notre installation. Lors de la création des vues, on dispose d'objets
+    prédéfinis permettant d'afficher des procédures et de définir des valeurs de process.
+    <b>b.	Planifier la création de vues</b>
+    Les principales étapes ci-dessous sont nécessaires à la création de vues :
+    - Planifier la structure de la représentation du process : combien de vues sont nécessaires,
+    dans quelle hiérarchie ; 
+    - Planifier la navigation entre les diverses vues ; 
+    - Adapter le modèle ;
+    - Créer les vues.
+    <b>c.	Constitution d’une vue</b>
+    Une vue peut être composée d'éléments statiques et d'éléments dynamiques.
+    - Les éléments statiques, tels que du texte ;
+    - Les éléments dynamiques varient en fonction de la procédure, ils indiquent les valeurs
+    de process actuels à partir de la mémoire de l'automate ou du pupitre.
+    Les objets sont des éléments graphiques qui permettent de configurer la présentation
+    des vues du process, la fenêtre des outils contient différents types d'objets fréquemment
+    utilisés dans les vues du process, pour créer une vue, on clique sur IHM puis sur « ajouter
+    une vue », la figure ci-dessous est une représentation de l’onglet de création de vue.
+    <img style="width: 400px; height:250px ;"  src='CREATION D_UNE VUE.PNG'>
+    Figure 1 : création d’une vue
+    <b>d.	Vues du process</b>
+    Les process partiels peuvent être représentés dans des vues séparées, puis regroupées en
+    une vue principale (initiale).
+    <img style="width: 400px; height:250px ;"  src='VUE PRINIPALE DE NOTRE PROJET.PNG'>
+    Figure 2 : Vue principale de notre système
+    <b>e.	Compilation et Simulation</b>
+    Après avoir créé le projet et terminé la configuration, il est indispensable de vérifier la
+    cohérence du projet, et de détecter les erreurs, à l’aide de la commande « en ligne » dans la
+    barre des menus on, clique sur la commande « simulation » puis « démarrer » puis on
+    vérifie le bon fonctionnement de notre système. Pour simuler notre système en entier plusieurs étapes sont à effectuer. 
+    Dans notre PLC on clique sur le bouton droit puis on choisit compiler.
+    On clique une fois sur « matériel (compilation complète) », puis sur « logiciel (compilation complète) »
+     la figure ci-dessous représente l’étape de compilation PLC.
+    <img style="width: 400px; height:250px ;"  src='ETAPE DE COMPILATION PLC.PNG'>
+    Figure 3 : Étape de compilation PLC
+    La deuxième étape est le lancement de la simulation, on clique sur le bouton « démarrer
+    la simulation » puis on charge le programme à l’aide du bouton « charger » dans la fenêtre
+    à gauche puis on clique sur le bouton RUN-P dans la fenêtre à droite, la figure ci-dessous
+    représente chargement et Run-p.
+    <img style="width: 400px; height:250px ;"  src='Etape du chargement et Run-p.PNG'>
+    Figure 4 : Étape du chargement et Run-p
+    Une fois le programme compilé sans erreurs la fenêtre qui suit s’affiche avec des
+    voyants verts. La figure ci-dessous est une représentation du bon déroulement de notre
+    compilation.
+    <img style="width: 400px; height:250px ;"  src='Compilation réussite.PNG'>
+    Figure 5 : Compilation réussite
+
+    
+    <b>2.	IHM SCHNEIDER</b>
+    <b>a.	Création d'un nouveau projet</b>
+    Après avoir installé VIJEO DESIGNER, lancer le logiciel. Une fois le logiciel lancé, une fenêtre doit s'ouvrir vous proposant plusieurs possibilités :
+    <img style="width: 400px; height:250px ;"  src='Écran de création d_un projet.PNG'>
+    Figure 6 : Écran de création d'un projet
+    Cliquez maintenant sur « Créer un nouveau projet » puis sur « Suivant ». Vous allez devoir maintenant choisir le nom de votre projet puis définir s'il y a une ou plusieurs cibles, autrement dit le matériel que vous avez acheté. 
+    Vous pouvez également définir un mot de passe pour protéger l'accès à votre programme.
+    Choisissez « Projet avec une seule cible », indiquez un nom puis cliquez sur « suivant ».
+    <img style="width: 400px; height:250px ;"  src='Identification du projet.PNG'>
+    Figure 7 : Identification du projet
+    À retenir : L'IHM est la cible de programmation.
+    <b>b.	Choix de la cible (IHM)</b>
+    En fonction du matériel, vous devrez choisir le bon modèle d'IHM.
+    <img style="width: 400px; height:250px ;"  src='choix du modèle d_IHM cible.PNG'>
+    Figure 8 : choix du modèle d'IHM cible
+    <b>c.	Configuration de l'adressage de l'IHM cible</b>
+    <img style="width: 400px; height:250px ;"  src='configuration IP d_un IHM.PNG'>
+    Figure 9 : configuration IP d'un IHM
+    <b>d.	Choix du pilote de communication avec l'automate</b>
+    L'automate TWIDO de l'équipement communique par MODBUS sur le réseau TCP/IP.
+    <img style="width: 400px; height:250px ;"  src='Choix du pilote de communication.PNG'>
+    Figure 10 : Choix du pilote de communication avec l'équipement (l'automate)
+    <b>e.	Configuration de l'équipement de communication</b>
+    <img style="width: 400px; height:250px ;"  src='configuration de l_équipement.PNG'>
+    Figure 11 : configuration de l'équipement
+    Dans la zone EquipementModbus01 Entrez l'adresse IP de l'automate Saisissez l'adresse ID :
+     pour un TWIDO Compact ID = 255 - pour un TWIDO Modulaire ID=1 (compris entre 1 et 255) 
+     Cocher Syntaxe IEC61131 Choisir Mot de poids faible en premier (mots double) pour le dialogue avec le TWIDO ou le Zélio.
+   </pre>
+</body>
+</html>
